@@ -13,13 +13,12 @@ body {
   font-family: var(--main-font);
   background-color: var(--project-grey);
   padding: 1rem;
+  line-height: 1;
 }
 
 main.container {
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(10, 1fr); */
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
 }
@@ -27,40 +26,35 @@ main.container {
 main > div[class^="article-"] {
   width: 100%;
   height: fit-content;
-  border-radius: 10px;
-  padding: 1rem;
+  border-radius: 20px;
+  padding: 2rem;
 }
 
-.article-reviews {
+.article-reviews,
+.article-grow {
   background-color: var(--primary-dark);
+  text-align: center;
+  color: var(--project-white);
+  padding: 2rem;
 }
 
-.article-manage {
+.article-manage,
+.article-audience {
   background-color: var(--project-white);
 }
 
-.article-maintain {
+.article-maintain,
+.article-write {
   background-color: var(--secondary-dark);
 }
 
 .article-schedule {
   background-color: var(--primary-light);
-}
-
-.article-grow {
-  background-color: var(--primary-dark);
-}
-
-.article-audience {
-  background-color: var(--project-white);
+  text-align: center;
 }
 
 .article-create {
   background-color: var(--secondary-light);
-}
-
-.article-write {
-  background-color: var(--secondary-dark);
 }
 
 footer {
@@ -75,4 +69,76 @@ footer p {
 footer a:hover {
   color: var(--primary-dark);
   text-decoration: underline;
+}
+
+.text-yellow {
+  color: var(--secondary-dark);
+}
+
+.text-purple {
+  color: var(--primary-dark);
+}
+
+@media (min-width: 320px) {
+  main.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main > div[class^="article-"] {
+    height: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  main.container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    gap: 2rem;
+    padding: 2rem;
+    max-height: fit-content;
+  }
+
+  .article-create {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+
+  .article-reviews {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .article-schedule {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+  }
+
+  .article-write {
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+  }
+
+  .article-manage {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+  }
+
+  .article-maintain {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+  }
+
+  .article-audience {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+
+  .article-grow {
+    grid-column: 3 / 5;
+    grid-row: 4 / 5;
+  }
 }
