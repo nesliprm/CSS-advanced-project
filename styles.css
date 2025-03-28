@@ -1,0 +1,51 @@
+:root {
+  --primary-light: hsl(254, 88%, 90%);
+  --primary-dark: hsl(256, 67%, 59%);
+  --secondary-light: hsl(31, 66%, 93%);
+  --secondary-dark: hsl(39, 100%, 71%);
+  --project-white: hsl(0, 0%, 98%);
+  --project-grey: hsl(0, 0%, 94%);
+  --project-black: hsl(0, 0%, 7%);
+  --main-font: "DM Sans", sans-serif;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--project-grey);
+  padding: 1rem;
+}
+
+.article-create {
+  width: 200px;
+  height: 200px;
+  background-color: var(--secondary-light);
+  border-radius: 10px;
+}
+
+.article-write {
+  width: 200px;
+  height: 200px;
+  background-color: var(--secondary-dark);
+  border-radius: 10px;
+}
+
+.article-manage {
+  width: 200px;
+  height: 200px;
+  background-color: var(--project-white);
+  border-radius: 10px;
+}
+
+.article-maintain {
+  width: 200px;
+  height: 200px;
+  background-color: var(--secondary-dark);
+  border-radius: 10px;
+}
+
+.article-create {
+  width: 200px;
+  height: 200px;
+  background-color: var(--secondary-light);
+  border-radius: 10px;
+}
