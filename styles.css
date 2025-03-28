@@ -40,11 +40,19 @@ h3 {
   text-align: center;
   color: var(--project-white);
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .article-manage,
 .article-audience {
   background-color: var(--project-white);
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .article-maintain,
@@ -53,15 +61,24 @@ h3 {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .article-schedule {
   background-color: var(--primary-light);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .article-create {
   background-color: var(--secondary-light);
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 footer {
@@ -84,6 +101,10 @@ footer a:hover {
 
 .text-purple {
   color: var(--primary-dark);
+}
+
+.width-85 {
+  max-width: 85%;
 }
 
 @media (min-width: 320px) {
